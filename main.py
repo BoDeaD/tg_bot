@@ -1,7 +1,8 @@
 import telebot
 from telebot import types
+import webbrowser
 
-bot = telebot.TeleBot('6020771738:AAG9KWg2f7M9HWfBX1f4J39apQs6wbNGW3I')
+bot = telebot.TeleBot(input("Enter key - "))
 
 
 @bot.message_handler(commands=['about'])
@@ -259,8 +260,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходить')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./gadzet_seve.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./gadzet_seve.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id, 'Тариф Ґаджет Безпека🌐Інтернет: 150 МБ на день ,📞Дзвінки 15 хв на день  ,💬SMS 15 SMS , Ціна 90 грн/12 тижнів. Чи підходить вам цей тариф ?', reply_markup=markup)
     if message.text == 'Так Підходить':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # +
@@ -270,8 +271,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./gadzet_smart.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./gadzet_smart.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id, 'Тариф Ґаджет Смарт 🌐Інтернет: 500 МБ на день ,📞Дзвінки 50 хв на день  ,💬SMS 50 SMS , Ціна 150 грн/4 тижнів. Чи підходить вам цей тариф ?', reply_markup=markup)
     if message.text == 'Так Підходитьㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # +
@@ -281,8 +282,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./prosto_live.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./prosto_live.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id, 'Тариф Просто Лайф 🌐Інтернет: 8 ГБ ,📞Дзвінки 300 хв  ,  Ціна 90 грн/4 тижнів. Чи підходить вам цей тариф ?', reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # +
@@ -292,8 +293,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./School_live.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./School_live.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id, 'Тариф Шкільний Лайф 🌐Інтернет: 7 ГБ ,📞Дзвінки Безліміт  ,  Ціна 150 грн/4 тижнів. Чи підходить вам цей тариф ?', reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # +
@@ -303,8 +304,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./smart_live.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./smart_live.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id,'Тариф Смарт Лайф 🌐Інтернет: 25 ГБ ,📞Дзвінки 800 хв ,  Ціна 120 грн/4 тижнів. Чи підходить вам цей тариф ?',reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -314,8 +315,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./famky.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./famky.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id,"Тариф Смарт Сім'я S 🌐Інтернет: 20 ГБ ,📞Дзвінки 500 хв ,  Ціна 375 грн/4 тижнів.Можливість об'єднувати до 5 номерів lifecell та користуватися спільно інтернетом, хвилинами та SMS пакету послуг тарифного плану Чи підходить вам цей тариф ?",reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -325,8 +326,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./free_live.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./free_live.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id,"Тариф Вільний Лайф 🌐Інтернет: Безліміт ,📞Дзвінки 1600 хв ,  Ціна 180 грн/4 тижнів. Чи підходить вам цей тариф ?",reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -336,8 +337,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤㅤㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./famky.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./famky.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id,"Тариф Смарт Сім'я L 🌐Інтернет: 50ГБ ,📞Дзвінки 1500 хв ,  Ціна 500 грн/4 тижнів.Можливість об'єднувати до 5 номерів lifecell та користуватися спільно інтернетом, хвилинами та SMS пакету послуг тарифного плану Чи підходить вам цей тариф ?",reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤㅤㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -347,8 +348,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('Так Підходитьㅤㅤㅤㅤㅤㅤㅤㅤ')
         btn2 = types.KeyboardButton('Ні не підходить')
         markup.add(btn1,btn2)
-        file = open('./Platinum_live.png', 'rb')
-        bot.send_photo(message.chat.id, file, reply_markup=markup)
+        # file = open('./Platinum_live.png', 'rb')
+        # bot.send_photo(message.chat.id, file, reply_markup=markup)
         bot.send_message(message.from_user.id,'Тариф Platinum Лайф 🌐Інтернет: Безліміт ,📞Дзвінки 3000 хв , 💬SMS 50 SMS,  Ціна 250 грн/4 тижнів. Чи підходить вам цей тариф ?',reply_markup=markup)
     if message.text == 'Так Підходитьㅤㅤㅤㅤㅤㅤㅤㅤ':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
